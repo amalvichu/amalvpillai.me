@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAL-V-PILLAI</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container-wrapper">
+        <script>
+            function spark(event) {
+                let i = document.createElement('i');
+                i.style.left = (event.pageX) + 'px';
+                i.style.top = (event.pageY) + 'px';
+                i.style.scale = '${Math.random() * 2 + 1}';
+                i.style.setProperty('--x', getRandomTransitionValue());
+                i.style.setProperty('--y', getRandomTransitionValue());
+
+                document.body.appendChild(i);
+
+                setTimeout(() => {
+                    document.body.removeChild(i);
+                }, 2000)
+            }
+
+            function getRandomTransitionValue() {
+                return '${Math.random() * 400 - 200}px';
+            }
+
+            document.addEventListener('mousemove', spark);
+        </script>
+
+        <header class="header">
+            <a href="#" class="logo">HACKICK</a>
+
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg class="hide" xmlns="http://www.w3.org/2000/svg"
+                                height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg></a></li>
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <ul>
+                    <li class="hideOnMobile"><a href="" class="active">Home</a></li>
+                    <li class="hideOnMobile"><a href="">About</a></li>
+                    <li class="hideOnMobile"><a href="">Services</a></li>
+                    <li class="hideOnMobile"><a href="">Portfolio</a></li>
+                    <li class="hideOnMobile"><a href="">Contact</a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                            </svg></a></li>
+                </ul>
+
+            </nav>
+
+            <script>
+                function showSidebar() {
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.classList.add('active')
+                }
+                function hideSidebar() {
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.classList.remove('active')
+                }
+            </script>
+
+        </header>
+
+        <section class="intro" style="position:relative;">
+            <canvas id="target-cursor-canvas"
+                style="position:absolute;top:0;left:0;pointer-events:none;z-index:100;"></canvas>
+            <div class="intro-content">
+                <h1 contenteditable="True"><span class="target-cursor-target">Hey, I'm Amal V Pillai</span></h1><br>
+                <h3><span class="target-cursor-target">Full Stack Web Developer</span></h3>
+                <p>Greetings!, I am a Full Stack Web Developer Specialised In Django. Passionate about creating industry
+                    trend websites and providing magnificient
+                    web services. I believe,<span style="color: coral;"> "Websites are a Professional connection with
+                        clients"</span>.
+                </p><br>
+                <div class="btn-box">
+                    <a href="">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        About Me</a>
+                    <a href="">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Lets talk</a>
+                </div>
+            </div>
+            <div class="media">
+                <a href="https://www.linkedin.com/in/amal-v-pillai-931152229/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/serenly_vic/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://github.com/amalvichu"><i class='bx bxl-github'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+            </div>
+            <span class="back-ImgHover"></span>
+        </section>
+        <section class="parallax-1">
+            <video autoplay loop muted class="bg-video">
+                <source src="static/vid/bg6.mp4" type="video/mp4">
+            </video>
+            <div class="parallax-inner">
+                <h1>More on me</h1>
+            </div>
+        </section>
+        <section class="about-flex-section">
+            <div class="about-flex-text">
+                <h2>About Me</h2>
+                <p>I'm a Computer Science graduate with a strong interest in creating visually appealing and
+                    user-friendly websites. I enjoy working on modern static web designs that blend simplicity with
+                    creativity, and I pay close attention to layout, typography, and overall user experience.
+                    I regularly explore the latest design trends, study real-world examples from other developers, and
+                    look for ways to refine my own style. I'm driven by curiosity, consistency, and a passion for clean,
+                    effective design.</p>
+            </div>
+            <div class="about-flex-image">
+                <img src="static/img/Programmer.jpeg" alt="About Me Photo">
+            </div>
+        </section>
+        <!-- SVG Wave Divider (Coral Accent, Subtle Height) -->
+        <div class="section-divider">
+          <svg viewBox="0 0 1440 60" width="100%" height="60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f76c3c" opacity="1"/>
+          </svg>
+        </div>
+        <!-- What I Believe Section -->
+        <section class="quote-section testimonial-section">
+          <div class="quote-flex">
+            <div class="quote-img-col">
+              <img class="quote-main-img" src="static/img/Robo.jpeg" alt="Robo" />
+            </div>
+            <div class="quote-carousel-col">
+              <h2 class="testimonial-heading">What I Believe</h2>
+              <div class="testimonial-carousel" id="quote-carousel">
+                <div class="testimonial-card active">
+                  <div class="testimonial-img-wrap">
+                    <img class="testimonial-img" src="static/img/time.png" alt="Quote 1" />
+                    <span class="testimonial-quote-badge">&#10077;</span>
+                  </div>
+                  <div class="testimonial-text">“Time is the most precious thing on Earth, even more valuable than diamonds. Once it's lost, it's gone forever.”</div>
+                </div>
+                <div class="testimonial-card">
+                  <div class="testimonial-img-wrap">
+                    <img class="testimonial-img" src="static/img/wait.png" alt="Quote 2" />
+                    <span class="testimonial-quote-badge">&#10077;</span>
+                  </div>
+                  <div class="testimonial-text">“Everything happens for a reason. Trust the timing, your day is on its way.”</div>
+                </div>
+                <div class="testimonial-card">
+                  <div class="testimonial-img-wrap">
+                    <img class="testimonial-img" src="static/img/successful.png" alt="Quote 3" />
+                    <span class="testimonial-quote-badge">&#10077;</span>
+                  </div>
+                  <div class="testimonial-text">“You survive by going through every situation, each one shapes you into the individual you're meant to become”</div>
+                </div>
+              </div>
+              <div class="testimonial-carousel-nav">
+                <button class="testimonial-carousel-btn prev">&#8592;</button>
+                <button class="testimonial-carousel-btn next">&#8594;</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="parallax-2">
+            <div class="parallax-inner">
+                <h1>Works</h1>
+            </div>
+        </section>
+        <p>1.SPORTSPINNACLE <br>
+            &nbsp Have created a sports platform for sports enthuasiast to engage themselves in cocching and empowering
+            their skills. It include special coaching for para-enthusiasts <br>
+            2.TEXTILE (under development) <br>
+            &nbsp Devloping an ecommerce platform for a basic textile shop. <br>
+            3.PRINTING <br>
+            &nbsp Shortly starting a new project for a printing shop.</p>
+        <section class="parallax-3">
+            <div class="parallax-inner">
+                <h1>Scroll Up</h1>
+            </div>
+        </section>
+
+        <!-- <section class="skills" id="skills">
+            <h2 class="heading"><span>SKILL SETS</span></h2>
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title">Coding Skills</h3>
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>HTML <span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>CSS <span>80%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>JavaScript <span>50%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Python <span>75%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <h3 class="title">Professional Skills</h3>
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>Web Design <span>95%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Web Development <span>80%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>JavaScript <span>50%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Python <span>75%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <h2>SKILLS</h2>
+
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <section class="product-container product-1">
+                    <div class="card card-html" data-url="https://html.com/html5/">
+                        <img class="photo" src="static/img/html.png" alt="Card Image">
+                        <div class="bg-title">HTML5</div>
+                        <div class="title">HTML</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-css" data-url="https://www.css3.info/">
+                        <img class="photo" src="static/img/css.png" alt="">
+                        <div class="bg-title">CSS3</div>
+                        <div class="title">CSS</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-js" data-url="https://javascript.info/">
+                        <img class="photo" src="static/img/javascript.png" alt="Card Image">
+                        <div class="bg-title">JS</div>
+                        <div class="title">JAVASCRIPT</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-bootstrap" data-url="https://getbootstrap.com/">
+                        <img class="photo" src="static/img/bootstrap.png" alt="Card Image">
+                        <div class="bg-title">BS</div>
+                        <div class="title">BOOTSTRAP</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-bootstrap" data-url="https://www.python.org/">
+                        <img class="photo" src="static/img/python.png" alt="Card Image">
+                        <div class="bg-title">PYTHON</div>
+                        <div class="title">PYTHON</div>
+                        <div class="content">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <h2>professional skills</h2>
+
+        <div class="slider-container-2">
+            <div class="slider-wrapper-2">
+                <section class="product-container product-2">
+                    <div class="card card-web-design">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Design</div>
+                        <div class="title">Web Design</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-web-dev">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Dev</div>
+                        <div class="title">Web Development</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-problem-solving">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Solve</div>
+                        <div class="title">Problem Solving</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-teamwork">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Team</div>
+                        <div class="title">Teamwork</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-communication">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Comm</div>
+                        <div class="title">Communication</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-project-management">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Mgmt</div>
+                        <div class="title">Project Management</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-creativity">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Create</div>
+                        <div class="title">Creativity</div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="card card-adaptability">
+                        <img class="photo" src="static/img/js.png" alt="Card Image">
+                        <div class="bg-title">Adapt</div>
+                        <div class="title">Adaptability</div>
+                        <div class="content">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <script src="static/js/slider.js"></script>
+    <script src="static/js/slider2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+    <script src="static/js/color-extractor.js"></script>
+    <script src="static/js/target-cursor.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutHeading = document.querySelector('.about-flex-text h2');
+            if (!aboutHeading) return;
+
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            aboutHeading.classList.add('animate');
+                            observer.unobserve(entry.target); // Only animate once
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+
+            observer.observe(aboutHeading);
+        });
+    </script>
+    <script>
+// What I Believe (Quote) Carousel Functionality with Directional Slide Animation
+(function() {
+  const cards = Array.from(document.querySelectorAll('#quote-carousel .testimonial-card'));
+  const prevBtn = document.querySelector('#quote-carousel ~ .testimonial-carousel-nav .testimonial-carousel-btn.prev');
+  const nextBtn = document.querySelector('#quote-carousel ~ .testimonial-carousel-nav .testimonial-carousel-btn.next');
+  let current = 0;
+  let timer = null;
+  let animating = false;
+
+  function showCard(idx, direction = 'right') {
+    if (animating || idx === current) return;
+    animating = true;
+    const oldCard = cards[current];
+    const newCard = cards[idx];
+    oldCard.classList.remove('active', 'slide-in-right', 'slide-out-left', 'slide-in-left', 'slide-out-right');
+    newCard.classList.remove('active', 'slide-in-right', 'slide-out-left', 'slide-in-left', 'slide-out-right');
+    if (direction === 'left') {
+      // Back button: current slides out right, previous slides in left
+      oldCard.style.position = 'absolute';
+      oldCard.classList.add('slide-out-right');
+      newCard.style.position = 'relative';
+      newCard.style.display = 'flex';
+      newCard.classList.add('slide-in-left');
+    } else {
+      // Next/auto: current slides out left, next slides in right
+      oldCard.style.position = 'absolute';
+      oldCard.classList.add('slide-out-left');
+      newCard.style.position = 'relative';
+      newCard.style.display = 'flex';
+      newCard.classList.add('slide-in-right');
+    }
+    setTimeout(() => {
+      oldCard.classList.remove('slide-out-left', 'slide-out-right');
+      oldCard.style.display = 'none';
+      oldCard.style.position = 'relative';
+      newCard.classList.remove('slide-in-right', 'slide-in-left');
+      newCard.classList.add('active');
+      animating = false;
+    }, 500);
+    current = idx;
+  }
+
+  function nextCard() {
+    showCard((current + 1) % cards.length, 'right');
+    resetTimer();
+  }
+
+  function prevCard() {
+    showCard((current - 1 + cards.length) % cards.length, 'left');
+    resetTimer();
+  }
+
+  function resetTimer() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(nextCard, 5000);
+  }
+
+  // Initial state
+  cards.forEach((card, i) => {
+    card.style.display = i === 0 ? 'flex' : 'none';
+    card.classList.toggle('active', i === 0);
+    card.style.position = 'relative';
+  });
+
+  if (prevBtn && nextBtn && cards.length > 0) {
+    prevBtn.addEventListener('click', prevCard);
+    nextBtn.addEventListener('click', nextCard);
+    resetTimer();
+  }
+})();
+</script>
+<script>
+// Animate .quote-section on scroll into view
+(function() {
+  const section = document.querySelector('.quote-section');
+  if (!section) return;
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        section.classList.add('animate-on-scroll');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  observer.observe(section);
+})();
+</script>
+</body>
+
+</html>
